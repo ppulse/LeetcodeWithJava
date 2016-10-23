@@ -14,7 +14,9 @@ public class Solution {
             int prevElem = 0;
             int currElem = 0;
             
-            for (int j = 1; j <= i; j++) {
+            int size = result.size();
+            
+            for (int j = 0; j < size; j++) {
                 prevElem = currElem;
                 currElem = result.poll();
                 result.add(prevElem + currElem);
