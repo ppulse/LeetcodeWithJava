@@ -6,11 +6,14 @@ public class Solution {
             return false;
         
         int idxOfS = 0;
-        for (int idxOfT = 0; idxOfT < t.length() && idxOfS < s.length(); idxOfT++) {
+        int tLen = t.length();
+        int sLen = s.length();
+        
+        for (int idxOfT = 0; idxOfT < tLen && idxOfS < sLen; idxOfT++) {
             if (s.charAt(idxOfS) == t.charAt(idxOfT))
                 idxOfS++;
         }
         
-        return idxOfS == s.length();
+        return idxOfS == sLen;
     }
 }
