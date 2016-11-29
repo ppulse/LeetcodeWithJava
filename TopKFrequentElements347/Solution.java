@@ -1,5 +1,5 @@
 public class Solution {
-    class Pair implements Comparable {
+    class Pair implements Comparable<Pair> {
         public int key;
         public int value;
         public Pair(int k, int v) {
@@ -7,9 +7,7 @@ public class Solution {
             value = v;
         }
         
-        public int compareTo(Object that) {
-            Pair other = (Pair)that;
-            
+        public int compareTo(Pair other) {
             if (value < other.value)
                 return 1;
             
