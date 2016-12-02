@@ -8,18 +8,18 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         
         while (idx < sLen) {
-        	int idxOfFirstLetter = idx;
+            int idxOfFirstLetter = idx;
             while (idx < sLen && !(s.charAt(idx) >= '0' && s.charAt(idx) <= '9')) {
                 idx++;
             }
+            sb.append(s.substring(idxOfFirstLetter, idx));
         
-            int idxOfFirstDigit = idx;
-            while (idx < sLen && s.charAt(idx) != '[') {
-                idx++;
-            }
-        
-            sb.append(s.substring(idxOfFirstLetter, idxOfFirstDigit));
-            if (idx < sLen) { 
+            if (idx < sLen) {
+                int idxOfFirstDigit = idx;
+                while (idx < sLen && s.charAt(idx) != '[') {
+                    idx++;
+                }
+                
                 int factor = Integer.valueOf(s.substring(idxOfFirstDigit, idx));
         
                 idx++;
